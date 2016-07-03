@@ -1,4 +1,4 @@
-name := "scala-de-challenge"
+name := "lazy-timeseries-processing"
 
 version := "1.0"
 
