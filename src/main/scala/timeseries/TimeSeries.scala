@@ -18,8 +18,8 @@ case class Event(timeStamp:Long, priceRatio:Double, eventsCount:Int,
     val aggregatedEvent = Event(this.timeStamp, this.priceRatio,
       this.eventsCount + that.eventsCount,
       this.rollingSum + that.priceRatio,
-      Seq(this.minPriceRatio, that.priceRatio).min,
-      Seq(this.maxPriceRatio, that.priceRatio).max
+      if(this.minPriceRatio < that.priceRatio) this.minPriceRatio else that.priceRatio,
+      if(this.maxPriceRatio > that.priceRatio) this.maxPriceRatio else that.priceRatio
     )
     aggregatedEvent.previous = that.previous
     aggregatedEvent
