@@ -1,6 +1,6 @@
 ## Time series processing
 
-A simple program to do compute aggregates within a rolling time window. The input could be an infinite stream of data.
+A simple program to compute aggregates within a rolling time window. The input could be an infinite stream of data.
 
 #### Compile and package 
 ```
